@@ -13,7 +13,7 @@ class SashaBot : TelegramLongPollingBot(DefaultBotOptions()) {
 
     override fun onUpdateReceived(update: Update) {
         val msg: Message =update.message
-        sendTextMessage(msg.chatId, msg.text)
+        sendTextMessage(msg.chatId, msg.text.reversed())
     }
 
 
